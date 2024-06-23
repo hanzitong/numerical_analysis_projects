@@ -1,11 +1,9 @@
 
+
 #include <iostream>
-#include <string>
 #include <vector>
 #include <nlopt.hpp>
-#include <cassert>
 #include <elipse_circle/elipse_circle.hpp>
-
 
 
 int main() {
