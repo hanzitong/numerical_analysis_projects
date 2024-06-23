@@ -5,6 +5,7 @@
 #include <iostream>
 #include <vector>
 #include <cassert>
+#include <cmath>
 
 
 namespace elipse_circle {
@@ -17,7 +18,7 @@ struct func_constant{
 
     func_constant(const double a, const double b, const double c, const double r) {
         assert(r <= c + a);     // if false, elipse is in circle. no intersection.
-        assert(r + a <= c);     // if false, elipse is out of circle. no intersection.
+        assert(r + a >= c);     // if false, elipse is out of circle. no intersection.
         consA = b * b - a * a;
         consB = -2. * c * a;
         consC = a * a * (r * r - b * b - c * c);

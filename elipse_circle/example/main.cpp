@@ -14,13 +14,18 @@ int main() {
     std::cout << "dimension: " << opt_obj.get_dimension() << std::endl;
 
     // need to set a, b, c, r parameters to calculate
-    elipse_circle::func_constant cons(20., 10., 10., 30.);
+    double a = 20.;
+    double b = 10.;
+    double c = 15.;
+    double r = 30.;
+    elipse_circle::func_constant cons(a, b, c, r);
     opt_obj.set_min_objective(elipse_circle::objfunc_elipse_circle, &cons);
     opt_obj.set_lower_bounds(std::vector<double>(1, 0.));
-    opt_obj.set_upper_bounds(std::vector<double>(1, 100.));
+    opt_obj.set_upper_bounds(std::vector<double>(1, r));
 
     double min_val = 0;
-    std::vector<double> ini_val(1, 50.);
+    std::vector<double> ini_val(1, r / 2.);  // initial value should be in elipse or circle
+    std::cout << ini_val[0] << std::endl;
     opt_obj.optimize(ini_val, min_val);
 
 
