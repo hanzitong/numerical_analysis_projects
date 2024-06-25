@@ -14,9 +14,9 @@ add_executable(calc_intersection example/main.cpp)
 target_include_directories(calc_intersection PRIVATE include)
 target_link_libraries(calc_intersection PRIVATE nlopt)
 
-add_executable(gendata_objfunc_elipse_circle plot/gendata_objfunc_elipse_circle.cpp)
-target_include_directories(gendata_objfunc_elipse_circle PRIVATE include)
-target_link_libraries(calc_intersection PRIVATE nlopt)
-install(TARGETS gendata_objfunc_elipse_circle DESTINATION ${CMAKE_SOURCE_DIR}/plot)
+# add_executable(gendata_objfunc_elipse_circle example/gendata_objfunc_elipse_circle.cpp)
+# target_include_directories(gendata_objfunc_elipse_circle PRIVATE include)
+# target_link_libraries(calc_intersection PRIVATE nlopt)
+# install(TARGETS gendata_objfunc_elipse_circle DESTINATION ${CMAKE_SOURCE_DIR}/plot)
 
 
