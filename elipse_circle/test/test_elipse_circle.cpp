@@ -49,11 +49,11 @@ TEST(IntersectionTest, RangeSolution) {
 
     // test if calculated intersection fills the elipse function 
     double elipse_upper = (x * x) / (a * a) + (y_upper * y_upper) / (b * b);
-    ASSERT_NEAR(elipse_upper, 1., 0.001);
+    ASSERT_NEAR(elipse_upper, 1., 1e-6);
     
     // obvious case.....
     double elipse_lower = (x * x) / (a * a) + (y_lower * y_lower) / (b * b);
-    ASSERT_NEAR(elipse_lower, 1., 0.001);
+    ASSERT_NEAR(elipse_lower, 1., 1e-6);
 }
 
 
